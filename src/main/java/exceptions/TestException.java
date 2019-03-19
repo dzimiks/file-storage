@@ -1,8 +1,8 @@
 package exceptions;
 
-public class TestException {
+public class TestException extends Exception {
 
-    public static void main(String[] args) {
-        System.out.println("Test");
+    public TestException(String message) {
+        super(message);
     }
 }
