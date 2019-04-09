@@ -7,12 +7,16 @@ package models;
 public interface Storage {
 
     /**
-     * Creates new storage instance.
+     * Creates new storage instance on given path.
+     *
+     * @param path Path of the storage.
      */
-    public void create();
+    public void create(String path);
 
     /**
-     * Deletes storage.
+     * Deletes storage from given path.
+     *
+     * @param path Path of the storage.
      */
-    public void delete();
+    public void delete(String path);
 }
