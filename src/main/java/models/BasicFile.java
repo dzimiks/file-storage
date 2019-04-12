@@ -1,5 +1,7 @@
 package models;
 
+import exceptions.CreateFileException;
+
 import java.io.File;
 
 /**
@@ -11,9 +13,11 @@ public interface BasicFile {
     /**
      * Creates new file instance on given path.
      *
-     * @param path Path of the file.
+     * @param name      Name of the file.
+     * @param extension Extension of the file.
+     * @param path      Path of the file.
      */
-    public void create(String path);
+    public void create(String name, String extension, String path) throws CreateFileException;
 
     /**
      * Deletes given file from given path.
