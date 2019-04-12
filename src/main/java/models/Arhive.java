@@ -19,7 +19,7 @@ public class Arhive {
      */
     public void zipFile(File file, String path) throws IOException {
         if (!file.isDirectory()) {
-            FileOutputStream fileOutputStream = new FileOutputStream(path + "/zipped-file.zip");
+            FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-file.zip");
             ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
             FileInputStream fileInputStream = new FileInputStream(file);
             ZipEntry zipEntry = new ZipEntry(file.getName());
@@ -46,7 +46,7 @@ public class Arhive {
      * @throws IOException Throws IOException if folder doesn't exists on given path.
      */
     public void zipFolder(File file, String path) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(path + "/zipped-folder.zip");
+        FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-folder.zip");
         ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
 
         zip(file, file.getName(), zipOutputStream);
@@ -68,11 +68,11 @@ public class Arhive {
         }
 
         if (file.isDirectory()) {
-            if (fileName.endsWith("/")) {
+            if (fileName.endsWith(File.separator)) {
                 zipOutputStream.putNextEntry(new ZipEntry(fileName));
                 zipOutputStream.closeEntry();
             } else {
-                zipOutputStream.putNextEntry(new ZipEntry(fileName + "/"));
+                zipOutputStream.putNextEntry(new ZipEntry(fileName + File.separator));
                 zipOutputStream.closeEntry();
             }
 
@@ -80,7 +80,7 @@ public class Arhive {
 
             if (children != null) {
                 for (File childFile : children) {
-                    zip(childFile, fileName + "/" + childFile.getName(), zipOutputStream);
+                    zip(childFile, fileName + File.separator + childFile.getName(), zipOutputStream);
                 }
             }
 
