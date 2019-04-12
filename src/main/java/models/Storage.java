@@ -6,7 +6,7 @@ import java.io.File;
  * @author dzimiks
  * Date: 19-03-2019 at 19:26
  */
-public class Storage implements Folder {
+public class Storage implements Directory {
 
 	private String name;
 	private static Storage instance = null;
@@ -52,7 +52,7 @@ public class Storage implements Folder {
 	}
 
 	@Override
-	public void delete(File folder, String path) {
+	public void delete(File directory, String path) {
 
 	}
 
@@ -62,7 +62,7 @@ public class Storage implements Folder {
 	}
 
 	@Override
-	public void upload(File folder, String path) {
+	public void upload(File directory, String path) {
 
 	}
 }

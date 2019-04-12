@@ -39,14 +39,14 @@ public class Arhive {
 	}
 
 	/**
-	 * Creates zipped folder on given path.
+	 * Creates zipped directory on given path.
 	 *
-	 * @param file Folder we want to zip.
-	 * @param path Path where we want to save zipped folder.
-	 * @throws IOException Throws IOException if folder doesn't exists on given path.
+	 * @param file Directory we want to zip.
+	 * @param path Path where we want to save zipped directory.
+	 * @throws IOException Throws IOException if directory doesn't exists on given path.
 	 */
-	public void zipFolder(File file, String path) throws IOException {
-		FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-folder.zip");
+	public void zipDirectory(File file, String path) throws IOException {
+		FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-directory.zip");
 		ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
 
 		zip(file, file.getName(), zipOutputStream);
@@ -55,10 +55,10 @@ public class Arhive {
 	}
 
 	/**
-	 * Recursively zip a given folder.
+	 * Recursively zip a given directory.
 	 *
-	 * @param file            File/folder we want to zip.
-	 * @param fileName        Name of given file/folder.
+	 * @param file            File/directory we want to zip.
+	 * @param fileName        Name of given file/directory.
 	 * @param zipOutputStream ZIP output stream.
 	 * @throws IOException Throws IOException if ZIP output stream doesn't work correctly.
 	 */
