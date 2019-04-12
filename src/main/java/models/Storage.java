@@ -8,9 +8,19 @@ import java.io.File;
  */
 public class Storage implements Directory {
 
+	/**
+	 * Name of the storage.
+	 */
 	private String name;
+
+	/**
+	 * Instance of Storage object.
+	 */
 	private static Storage instance = null;
 
+	/**
+	 * Storage constructor.
+	 */
 	private Storage() {
 		this.name = "Storage";
 	}
@@ -63,6 +73,16 @@ public class Storage implements Directory {
 
 	@Override
 	public void upload(File directory, String path) {
+
+	}
+
+	@Override
+	public void move(String path) {
+
+	}
+
+	@Override
+	public void rename(File file, String name) {
 
 	}
 }

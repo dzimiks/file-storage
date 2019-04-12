@@ -37,4 +37,19 @@ public interface Directory {
 	 * @param path      Path of the directory on the storage.
 	 */
 	public void upload(File directory, String path);
+
+	/**
+	 * Moves directory to given path.
+	 *
+	 * @param path Path where we want to move directory.
+	 */
+	public void move(String path);
+
+	/**
+	 * Renames current directory.
+	 *
+	 * @param file Directory which we want to rename.
+	 * @param name New name for the directory.
+	 */
+	public void rename(File file, String name);
 }

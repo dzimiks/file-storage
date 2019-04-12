@@ -41,4 +41,19 @@ public interface BasicFile {
 	 * @param path Path of the file on the storage.
 	 */
 	public void upload(File file, String path);
+
+	/**
+	 * Moves file to given path.
+	 *
+	 * @param path Path where we want to move file.
+	 */
+	public void move(String path);
+
+	/**
+	 * Renames current file.
+	 *
+	 * @param file File which we want to rename.
+	 * @param name New name for the file.
+	 */
+	public void rename(File file, String name);
 }
