@@ -87,4 +87,19 @@ public class Storage implements Directory {
 	public void rename(String name, String path) {
 		this.name = name;
 	}
+
+	@Override
+	public void listFiles(String path, boolean sorted) {
+
+	}
+
+	@Override
+	public void listFilesWithExtensions(String path, String[] extensions, boolean sorted) {
+
+	}
+
+	@Override
+	public void listDirs(String path, boolean sorted) {
+
+	}
 }
