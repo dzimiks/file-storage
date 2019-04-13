@@ -1,5 +1,8 @@
 package models;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * @author dzimiks
  * Date: 17-03-2019 at 20:15
@@ -36,6 +39,22 @@ public interface Directory {
 	 * @param dest Path of the directory where we want to upload it.
 	 */
 	public void upload(String src, String dest);
+
+	/**
+	 * Uploads multiple directories on given path in storage.
+	 *
+	 * @param directories List of directories.
+	 * @param dest        Path on the storage where we want to upload directories.
+	 */
+	public void uploadMultiple(ArrayList<File> directories, String dest);
+
+	/**
+	 * Uploads multiple zipped directories on given path in storage.
+	 *
+	 * @param directories List of directories.
+	 * @param dest        Path on the storage where we want to upload zipped directories.
+	 */
+	public void uploadMultipleZip(ArrayList<File> directories, String dest);
 
 	/**
 	 * Moves directory to given path.

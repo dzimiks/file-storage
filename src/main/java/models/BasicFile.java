@@ -2,6 +2,9 @@ package models;
 
 import exceptions.CreateFileException;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * @author dzimiks
  * Date: 17-03-2019 at 20:13
@@ -27,7 +30,7 @@ public interface BasicFile {
 	 * Downloads file on given path.
 	 *
 	 * @param src  Path of the file on the storage.
-	 * @param dest Path of the file where we want to download it.
+	 * @param dest Path on the storage where we want to download file.
 	 */
 	public void download(String src, String dest);
 
@@ -35,15 +38,32 @@ public interface BasicFile {
 	 * Uploads file in storage on given path.
 	 *
 	 * @param src  Path of the file on the storage.
-	 * @param dest Path of the file where we want to upload it.
+	 * @param dest Path on the storage where we want to upload file.
 	 */
 	public void upload(String src, String dest);
+
+
+	/**
+	 * Uploads multiple file on given path in storage.
+	 *
+	 * @param files List of files.
+	 * @param dest  Path on the storage where we want to upload files.
+	 */
+	public void uploadMultiple(ArrayList<File> files, String dest);
+
+	/**
+	 * Uploads multiple zipped files on given path in storage.
+	 *
+	 * @param files List of files.
+	 * @param dest  Path on the storage where we want to upload zipped files.
+	 */
+	public void uploadMultipleZip(ArrayList<File> files, String dest);
 
 	/**
 	 * Moves file to given path.
 	 *
 	 * @param src  Path of the file on the storage.
-	 * @param dest Path where we want to move file.
+	 * @param dest Path on the storage where we want to move file.
 	 */
 	public void move(String src, String dest);
 
