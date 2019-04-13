@@ -71,4 +71,29 @@ public interface Directory {
 	 * @param path Path of the directory on the storage.
 	 */
 	public void rename(String name, String path);
+
+	/**
+	 * Lists all files in directory from given path.
+	 *
+	 * @param path   Path of the directory on the storage.
+	 * @param sorted True if we want to list files in sorted order.
+	 */
+	public void listFiles(String path, boolean sorted);
+
+	/**
+	 * Lists all files with given extensions in directory from given path.
+	 *
+	 * @param path       Path of the directory on the storage.
+	 * @param extensions Array of file extensions.
+	 * @param sorted     True if we want to list files in sorted order.
+	 */
+	public void listFilesWithExtensions(String path, String[] extensions, boolean sorted);
+
+	/**
+	 * Lists all directories in directory from given path.
+	 *
+	 * @param path   Path of the directory on the storage.
+	 * @param sorted True if we want to list files in sorted order.
+	 */
+	public void listDirs(String path, boolean sorted);
 }
