@@ -1,5 +1,8 @@
 package models;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * @author dzimiks
  * Date: 19-03-2019 at 19:26
@@ -62,6 +65,16 @@ public class Storage implements Directory {
 
 	@Override
 	public void upload(String src, String dest) {
+
+	}
+
+	@Override
+	public void uploadMultiple(ArrayList<File> directories, String dest) {
+
+	}
+
+	@Override
+	public void uploadMultipleZip(ArrayList<File> directories, String dest) {
 
 	}
 
