@@ -1,7 +1,5 @@
 package models;
 
-import java.io.File;
-
 /**
  * @author dzimiks
  * Date: 17-03-2019 at 20:15

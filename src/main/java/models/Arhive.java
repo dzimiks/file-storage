@@ -14,12 +14,13 @@ public class Arhive {
 	 * Creates zipped file on given path.
 	 *
 	 * @param file File we want to zip.
+	 * @param name File name.
 	 * @param path Path where we want to save zipped file.
 	 * @throws IOException Throws IOException if file doesn't exists on given path.
 	 */
-	public void zipFile(File file, String path) throws IOException {
+	public void zipFile(File file, String name, String path) throws IOException {
 		if (!file.isDirectory()) {
-			FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-file.zip");
+			FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + name + ".zip");
 			ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
 			FileInputStream fileInputStream = new FileInputStream(file);
 			ZipEntry zipEntry = new ZipEntry(file.getName());
@@ -42,11 +43,12 @@ public class Arhive {
 	 * Creates zipped directory on given path.
 	 *
 	 * @param file Directory we want to zip.
+	 * @param name Directory name.
 	 * @param path Path where we want to save zipped directory.
 	 * @throws IOException Throws IOException if directory doesn't exists on given path.
 	 */
-	public void zipDirectory(File file, String path) throws IOException {
-		FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + "zipped-directory.zip");
+	public void zipDirectory(File file, String name, String path) throws IOException {
+		FileOutputStream fileOutputStream = new FileOutputStream(path + File.separator + name + ".zip");
 		ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
 
 		zip(file, file.getName(), zipOutputStream);
