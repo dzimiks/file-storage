@@ -2,8 +2,6 @@ package models;
 
 import exceptions.CreateFileException;
 
-import java.io.File;
-
 /**
  * @author dzimiks
  * Date: 17-03-2019 at 20:13
@@ -13,47 +11,47 @@ public interface BasicFile {
 	/**
 	 * Creates new file instance on given path.
 	 *
-	 * @param name      Name of the file.
-	 * @param extension Extension of the file.
-	 * @param path      Path of the file.
+	 * @param name Name of the file.
+	 * @param path Path of the file.
 	 */
-	public void create(String name, String extension, String path) throws CreateFileException;
+	public void create(String name, String path) throws CreateFileException;
 
 	/**
 	 * Deletes given file from given path.
 	 *
-	 * @param file File which we want to delete.
 	 * @param path Path of the file on the storage.
 	 */
-	public void delete(File file, String path);
+	public void delete(String path);
 
 	/**
 	 * Downloads file on given path.
 	 *
-	 * @param path Path of the file where we want to download it.
+	 * @param src  Path of the file on the storage.
+	 * @param dest Path of the file where we want to download it.
 	 */
-	public void download(String path);
+	public void download(String src, String dest);
 
 	/**
 	 * Uploads file in storage on given path.
 	 *
-	 * @param file File which we want to upload.
-	 * @param path Path of the file on the storage.
+	 * @param src  Path of the file on the storage.
+	 * @param dest Path of the file where we want to upload it.
 	 */
-	public void upload(File file, String path);
+	public void upload(String src, String dest);
 
 	/**
 	 * Moves file to given path.
 	 *
-	 * @param path Path where we want to move file.
+	 * @param src  Path of the file on the storage.
+	 * @param dest Path where we want to move file.
 	 */
-	public void move(String path);
+	public void move(String src, String dest);
 
 	/**
 	 * Renames current file.
 	 *
-	 * @param file File which we want to rename.
 	 * @param name New name for the file.
+	 * @param path Path of the file on the storage.
 	 */
-	public void rename(File file, String name);
+	public void rename(String name, String path);
 }

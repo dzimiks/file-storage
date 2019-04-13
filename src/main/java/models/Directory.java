@@ -11,45 +11,47 @@ public interface Directory {
 	/**
 	 * Creates new directory instance on given path.
 	 *
-	 * @param path Path of the file.
+	 * @param name Name of the directory.
+	 * @param path Path of the directory on the storage.
 	 */
-	public void create(String path);
+	public void create(String name, String path);
 
 	/**
 	 * Deletes directory from given path.
 	 *
-	 * @param directory Directory which we want to delete.
-	 * @param path      Path of the directory on the storage.
+	 * @param path Path of the directory on the storage.
 	 */
-	public void delete(File directory, String path);
+	public void delete(String path);
 
 	/**
-	 * Downloads zipped directory.
+	 * Downloads directory on given path.
 	 *
-	 * @param path Path of the directory where we want to download it.
+	 * @param src  Path of the directory on the storage.
+	 * @param dest Path of the directory where we want to download it.
 	 */
-	public void download(String path);
+	public void download(String src, String dest);
 
 	/**
 	 * Uploads directory in storage on given path.
 	 *
-	 * @param directory Directory which we want to upload.
-	 * @param path      Path of the directory on the storage.
+	 * @param src  Path of the directory on the storage.
+	 * @param dest Path of the directory where we want to upload it.
 	 */
-	public void upload(File directory, String path);
+	public void upload(String src, String dest);
 
 	/**
 	 * Moves directory to given path.
 	 *
-	 * @param path Path where we want to move directory.
+	 * @param src  Path of the directory on the storage.
+	 * @param dest Path where we want to move directory.
 	 */
-	public void move(String path);
+	public void move(String src, String dest);
 
 	/**
 	 * Renames current directory.
 	 *
-	 * @param file Directory which we want to rename.
 	 * @param name New name for the directory.
+	 * @param path Path of the directory on the storage.
 	 */
-	public void rename(File file, String name);
+	public void rename(String name, String path);
 }

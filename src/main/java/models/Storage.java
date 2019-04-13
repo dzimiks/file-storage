@@ -1,7 +1,5 @@
 package models;
 
-import java.io.File;
-
 /**
  * @author dzimiks
  * Date: 19-03-2019 at 19:26
@@ -47,42 +45,33 @@ public class Storage implements Directory {
 		return name;
 	}
 
-	/**
-	 * Renames current storage.
-	 *
-	 * @param name New name of storage.
-	 */
-	public void rename(String name) {
+	@Override
+	public void create(String name, String path) {
+
+	}
+
+	@Override
+	public void delete(String path) {
+
+	}
+
+	@Override
+	public void download(String src, String dest) {
+
+	}
+
+	@Override
+	public void upload(String src, String dest) {
+
+	}
+
+	@Override
+	public void move(String src, String dest) {
+
+	}
+
+	@Override
+	public void rename(String name, String path) {
 		this.name = name;
-	}
-
-	@Override
-	public void create(String path) {
-
-	}
-
-	@Override
-	public void delete(File directory, String path) {
-
-	}
-
-	@Override
-	public void download(String path) {
-
-	}
-
-	@Override
-	public void upload(File directory, String path) {
-
-	}
-
-	@Override
-	public void move(String path) {
-
-	}
-
-	@Override
-	public void rename(File file, String name) {
-
 	}
 }
