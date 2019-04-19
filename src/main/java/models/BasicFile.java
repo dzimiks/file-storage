@@ -48,16 +48,18 @@ public interface BasicFile {
 	 *
 	 * @param files List of files.
 	 * @param dest  Path on the storage where we want to upload files.
+	 * @param name Name of created zip
 	 */
-	public void uploadMultiple(ArrayList<File> files, String dest);
+	public void uploadMultiple(ArrayList<File> files, String dest,String name);
 
 	/**
 	 * Uploads multiple zipped files on given path in storage.
 	 *
 	 * @param files List of files.
 	 * @param dest  Path on the storage where we want to upload zipped files.
+	 * @param name Name of created zip
 	 */
-	public void uploadMultipleZip(ArrayList<File> files, String dest);
+	public void uploadMultipleZip(ArrayList<File> files, String dest,String name);
 
 	/**
 	 * Moves file to given path.

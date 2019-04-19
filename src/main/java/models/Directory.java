@@ -43,18 +43,20 @@ public interface Directory {
 	/**
 	 * Uploads multiple directories on given path in storage.
 	 *
-	 * @param directories List of directories.
-	 * @param dest        Path on the storage where we want to upload directories.
+	 * @param directories 	List of directories.
+	 * @param dest 			Path on the storage where we want to upload directories.
+	 * @param name 			Name of created zip
 	 */
-	public void uploadMultiple(ArrayList<File> directories, String dest);
+	public void uploadMultiple(ArrayList<File> directories, String dest,String name);
 
 	/**
 	 * Uploads multiple zipped directories on given path in storage.
 	 *
 	 * @param directories List of directories.
 	 * @param dest        Path on the storage where we want to upload zipped directories.
+	 * @param name 		Name of created zip
 	 */
-	public void uploadMultipleZip(ArrayList<File> directories, String dest);
+	public void uploadMultipleZip(ArrayList<File> directories, String dest,String name);
 
 	/**
 	 * Moves directory to given path.
