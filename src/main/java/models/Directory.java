@@ -3,7 +3,7 @@ package models;
 import exceptions.*;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author dzimiks
@@ -54,7 +54,7 @@ public interface Directory {
      * @param name        Name of created zip.
      *
      */
-    public void uploadMultiple(ArrayList<File> directories, String dest, String name) throws UploadMultipleException;
+    public void uploadMultiple(List<File> directories, String dest, String name) throws UploadMultipleException;
 
     /**
      * Uploads multiple zipped directories on given path in storage.
@@ -64,7 +64,7 @@ public interface Directory {
      * @param name        Name of created zip
      *
      */
-    public void uploadMultipleZip(ArrayList<File> directories, String dest, String name) throws UploadMultipleZipException;
+    public void uploadMultipleZip(List<File> directories, String dest, String name) throws UploadMultipleZipException;
 
     /**
      * Moves directory to given path.
@@ -111,5 +111,5 @@ public interface Directory {
      * @return Returns list of directories.
      *
      */
-    public ArrayList<File> listDirs(String path, boolean sorted) throws ListDirectoryException;
+    public List<File> listDirs(String path, boolean sorted) throws ListDirectoryException;
 }

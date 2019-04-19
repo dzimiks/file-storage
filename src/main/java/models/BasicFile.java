@@ -3,7 +3,7 @@ package models;
 import exceptions.*;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author dzimiks
@@ -56,7 +56,7 @@ public interface BasicFile {
 	 * @param name Name of created zip
 	 *
 	 */
-	public void uploadMultiple(ArrayList<File> files, String dest,String name) throws UploadMultipleException;
+	public void uploadMultiple(List<File> files, String dest,String name) throws UploadMultipleException;
 
 	/**
 	 * Uploads multiple zipped files on given path in storage.
@@ -66,7 +66,7 @@ public interface BasicFile {
 	 * @param name Name of created zip
 	 *
 	 */
-	public void uploadMultipleZip(ArrayList<File> files, String dest,String name)throws UploadMultipleZipException;
+	public void uploadMultipleZip(List<File> files, String dest, String name)throws UploadMultipleZipException;
 
 	/**
 	 * Moves file to given path.
