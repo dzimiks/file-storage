@@ -45,7 +45,7 @@ public interface Directory {
 	 *
 	 * @param directories 	List of directories.
 	 * @param dest 			Path on the storage where we want to upload directories.
-	 * @param name 			Name of created zip
+	 * @param name 			Name of created zip.
 	 */
 	public void uploadMultiple(ArrayList<File> directories, String dest,String name);
 

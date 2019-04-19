@@ -69,12 +69,12 @@ public class Storage implements Directory {
 	}
 
 	@Override
-	public void uploadMultiple(ArrayList<File> directories, String dest) {
+	public void uploadMultiple(ArrayList<File> directories, String dest,String name) {
 
 	}
 
 	@Override
-	public void uploadMultipleZip(ArrayList<File> directories, String dest) {
+	public void uploadMultipleZip(ArrayList<File> directories, String dest,String name) {
 
 	}
 
