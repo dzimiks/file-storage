@@ -99,7 +99,7 @@ public class Storage implements Directory {
 	}
 
 	@Override
-	public void listDirs(String path, boolean sorted) {
-
+	public ArrayList<File> listDirs(String path, boolean sorted) {
+		return null;
 	}
 }

@@ -1,10 +1,10 @@
 package exceptions;
 
 /**
- * Exception thrown if there is error with uploading file.
+ * Exception thrown if there is error with uploading file/directory.
  */
-public class UploadFileException extends Exception{
-    public UploadFileException() {
-        super("Error while uploading file!");
+public class UploadException extends Exception{
+    public UploadException() {
+        super("Error while uploading file/directory!");
     }
 }
